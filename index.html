@@ -4,43 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junta Marcelino 2024</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        p {
-            text-align: center;
-            color: #666;
-        }
-        a {
-            text-decoration: none;
-            color: #007bff;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Junta Marcelino 2024</h1>
-        <p>Bienvenido a la lista de invitados para la junta Marcelino 2024.</p>
-        <p><a href="index.php">Ver lista de invitados</a></p>
+        <form id="form-agregar">
+            Nombre: <input type="text" id="nombre">
+            <input type="button" value="Agregar" onclick="agregarInvitado()">
+        </form>
+        <br>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Acción</th>
+            </tr>
+            <tbody id="lista-invitados">
+                <!-- Aquí se mostrarán los invitados -->
+            </tbody>
+        </table>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
+
