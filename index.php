@@ -1,10 +1,11 @@
 <?php
-// Conexión a la base de datos (reemplaza con tus propios datos)
+// Datos de conexión a la base de datos
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
-$database = "chuleta";
+$database = "junta_marcelino_2024";
 
+// Crear conexión
 $conn = new mysqli($servername, $username, $password, $database);
 
 // Verificar conexión
@@ -25,7 +26,7 @@ function agregarInvitado($conn, $nombre) {
 
 // Función para eliminar invitados
 function eliminarInvitado($conn, $id) {
-    $sql = "DELETE FROM invitados WHERE numero=$id";
+    $sql = "DELETE FROM invitados WHERE nombre='$id'";
     if ($conn->query($sql) === TRUE) {
         header("Location: {$_SERVER['PHP_SELF']}");
         exit();
@@ -51,12 +52,12 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cumple Toblipa</title>
+    <title>Junta Marcelino 2024</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Cumple Toblipa</h1>
+        <h1>Junta Marcelino 2024</h1>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             Nombre: <input type="text" name="nombre">
             <input type="submit" value="Agregar">
@@ -72,7 +73,7 @@ $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()) {
                     echo "<tr>";
                     echo "<td>" . $row["nombre"] . "</td>";
-                    echo "<td><a href=\"".$_SERVER["PHP_SELF"]."?action=delete&id=".$row["numero"]."\" onclick=\"return confirmarEliminar()\">Eliminar</a></td>";
+                    echo "<td><a href=\"".$_SERVER["PHP_SELF"]."?action=delete&id=".$row["nombre"]."\" onclick=\"return confirmarEliminar()\">Eliminar</a></td>";
                     echo "</tr>";
                 }
             } else {
