@@ -1,42 +1,76 @@
 body {
     font-family: 'Press Start 2P', cursive;
-    font-size: 14px; 
+    font-size: 14px; /* Tamaño de la fuente */
     margin: 0;
     padding: 0;
-    background-color: #0c0c0c;
-    color: #fff;
+    background-color: #0c0c0c; /* Color de fondo */
+    color: #fff; /* Color de texto */
 }
+
 .container {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #1c1c1c;
+    background-color: #1c1c1c; /* Color de fondo del contenedor */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
 h1 {
     text-align: center;
 }
+
 form {
     text-align: center;
 }
+
+#nombre {
+    width: 200px; /* Ancho del campo de nombre */
+    padding: 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
+
 th, td {
     padding: 10px;
     border-bottom: 1px solid #3c3c3c;
     text-align: left;
 }
+
 th {
     background-color: #3c3c3c;
 }
+
 .delete-btn {
     color: #ff0000;
     cursor: pointer;
 }
+
 .delete-btn:hover {
     text-decoration: underline;
+}
+
+input[type="button"] {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Alineación de texto centrada */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar como bloque en línea */
+    cursor: pointer; /* Cambiar cursor a mano */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+}
+
+input[type="button"]:hover {
+    background-color: #45a049; /* Cambia el color de fondo al pasar el ratón por encima */
 }
